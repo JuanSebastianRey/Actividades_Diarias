@@ -9,3 +9,14 @@ exports.getLabels = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
+
+exports.getLabelsById = async (req,res) => {
+    try {
+        const label = await Label.findById(req.params.id, '-_id');
+        if (!label)
+            return res.status(404).json({ message: "No se encontró la etiqueta" });
+        res.json(label);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
