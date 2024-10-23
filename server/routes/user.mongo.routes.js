@@ -7,7 +7,7 @@ const { getObjective, getObjectiveById } = require('../controllers/objectivesCon
 const { getLabels, getLabelsById } = require('../controllers/labelController');
 const { getCategories, getCategoriesById } = require('../controllers/categoryController');
 const { getHitos, getHitosById } = require('../controllers/hitoController');
-const { getStadistic } = require('../controllers/stadisticController');
+const { getStadistic, getStadisticById } = require('../controllers/stadisticController');
 
 
 router.get('/usuarios', getUsers)
@@ -25,5 +25,6 @@ router.get('/categorias/:id', getCategoriesById)
 router.get('/hitos', getHitos)
 router.get('/hitos/:id', getHitosById)
 router.get('/estadisticas', getStadistic)
+router.get('/estadisticas/:id', getStadisticById)
 
 module.exports = router;
