@@ -6,6 +6,7 @@ const { getReminders, getRemindersById } = require('../controllers/rememberContr
 const { getObjective, getObjectiveById } = require('../controllers/objectivesController');
 const { getLabels, getLabelsById } = require('../controllers/labelController');
 const { getCategories, getCategoriesById } = require('../controllers/categoryController');
+const { getHitos, getHitosById } = require('../controllers/hitoController');
 
 
 router.get('/usuarios', getUsers)
@@ -20,5 +21,7 @@ router.get('/etiquetas', getLabels)
 router.get('/etiquetas/:id', getLabelsById)
 router.get('/categorias', getCategories)
 router.get('/categorias/:id', getCategoriesById)
+router.get('/hitos', getHitos)
+router.get('/hitos/:id', getHitosById)
 
 module.exports = router;
