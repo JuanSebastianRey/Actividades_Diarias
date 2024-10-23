@@ -8,6 +8,7 @@ const { getLabels, getLabelsById } = require('../controllers/labelController');
 const { getCategories, getCategoriesById } = require('../controllers/categoryController');
 const { getHitos, getHitosById } = require('../controllers/hitoController');
 const { getStadistic, getStadisticById } = require('../controllers/stadisticController');
+const { getReports } = require('../controllers/reportController');
 
 
 router.get('/usuarios', getUsers)
@@ -26,5 +27,6 @@ router.get('/hitos', getHitos)
 router.get('/hitos/:id', getHitosById)
 router.get('/estadisticas', getStadistic)
 router.get('/estadisticas/:id', getStadisticById)
+router.get('/reportes', getReports)
 
 module.exports = router;
